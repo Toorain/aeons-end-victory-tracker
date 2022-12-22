@@ -23,13 +23,18 @@ function App() {
       ]
     },
     {
-      setName: t('warEternal'),
+      setName: t('theDepth'),
       mageList: ['Adelhelm', 'Brama', 'Jian', 'Kadir', 'Lash', 'Mist', 'Phaedraxa'],
       nemesisList: [
-        {name: 'rageBorne', src: 'rageBorne'},
-        {name: 'princeOfGluttons', src: 'princeOfGluttons'},
-        {name: 'crookedMask', src: 'crookedMask'},
-        {name: 'carapaceQueen', src: 'carapaceQueen'}
+        {name: 'horde', src: 'horde'},
+      ]
+    },
+    {
+      setName: t('theNameless'),
+      mageList: ['Adelhelm', 'Brama', 'Jian', 'Kadir', 'Lash', 'Mist', 'Phaedraxa'],
+      nemesisList: [
+        {name: 'blight', src: 'blight'},
+        {name: 'wayward', src: 'wayward'},
       ]
     },
   ]

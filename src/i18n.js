@@ -19,6 +19,11 @@ i18next
           carapaceQueen: 'Reine Carapace',
           princeOfGluttons: 'Prince des Gloutons',
           crookedMask: 'Masque Tordu',
+          theDepth: 'Les Profondeurs',
+          horde: 'La Mégère',
+          theNameless: 'Les Sans-Noms',
+          blight: 'Seigneur de la Désolation',
+          wayward: 'L\'Égaré'
         }
       },
       en: {
@@ -32,6 +37,11 @@ i18next
           carapaceQueen: 'Carapace Queen',
           princeOfGluttons: 'Prince of Gluttons',
           crookedMask: 'Crooked Mask',
+          theDepth: 'The Depth',
+          horde: 'Horde-Crone',
+          theNameless: 'The Nameless',
+          blight: 'Blight Lord',
+          wayward: 'Wayward One'
         }
       }
     }
