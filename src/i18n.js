@@ -10,18 +10,28 @@ i18next
     resources: {
       fr: {
         translation: {
+          easy: 'Facile',
+          hard: 'Difficile',
+          brutal: 'Brutal',
+          basicSet: 'Jeu de Base',
+          warEternal: 'Guerre éternelle',
           rageBorne: 'Rage Incarnée',
           carapaceQueen: 'Reine Carapace',
           princeOfGluttons: 'Prince des Gloutons',
-          crookedMask: 'Masque Tordu'
+          crookedMask: 'Masque Tordu',
         }
       },
       en: {
         translation: {
+          easy: 'Easy',
+          hard: 'Hard',
+          brutal: 'Brutal',
+          basicSet: 'Basic Set',
+          warEternal: 'War Eternal',
           rageBorne: 'Rageborne',
           carapaceQueen: 'Carapace Queen',
           princeOfGluttons: 'Prince of Gluttons',
-          crookedMask: 'Crooked Mask'
+          crookedMask: 'Crooked Mask',
         }
       }
     }
