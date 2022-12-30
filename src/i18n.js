@@ -11,8 +11,9 @@ i18next
       fr: {
         translation: {
           easy: 'Facile',
-          hard: 'Difficile',
-          brutal: 'Brutal',
+          normal: 'Normal',
+          hard: 'Expert',
+          brutal: 'Extermination',
           basicSet: 'Jeu de Base',
           warEternal: 'Guerre éternelle',
           rageBorne: 'Rage Incarnée',
@@ -23,14 +24,22 @@ i18next
           horde: 'La Mégère',
           theNameless: 'Les Sans-Noms',
           blight: 'Seigneur de la Désolation',
-          wayward: 'L\'Égaré'
+          wayward: 'L\'Égaré',
+          nbPlayers: 'Nombre de joueurs',
+          true1P: '1 Joueur 1 Mage (True 1P)',
+          onePlayer2Mages: '1 Joueurs 2 Mages',
+          twoPlayers: '2 Joueurs',
+          threePlayers: '3 Joueurs',
+          fourPlayers: '4 Joueurs',
+          or: 'ou'
         }
       },
       en: {
         translation: {
           easy: 'Easy',
-          hard: 'Hard',
-          brutal: 'Brutal',
+          normal: 'Normal',
+          hard: 'Expert',
+          brutal: 'Extermination',
           basicSet: 'Basic Set',
           warEternal: 'War Eternal',
           rageBorne: 'Rageborne',
@@ -41,7 +50,14 @@ i18next
           horde: 'Horde-Crone',
           theNameless: 'The Nameless',
           blight: 'Blight Lord',
-          wayward: 'Wayward One'
+          wayward: 'Wayward One',
+          nbPlayers: 'Number of players',
+          true1P: '1 Player 1 Mage (True 1P)',
+          onePlayer2Mages: '1 Player 2 Mages',
+          twoPlayers: '2 Players',
+          threePlayers: '3 Players',
+          fourPlayers: '4 Players',
+          or: 'or'
         }
       }
     }

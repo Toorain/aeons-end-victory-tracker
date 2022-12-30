@@ -2,6 +2,7 @@ import './App.css';
 import {useTranslation} from "react-i18next";
 import {Button, ButtonGroup} from "@mui/material";
 import Expansion from "./components/Expansion/Expansion";
+import localStorageCustom from "./utils/LocalStorage";
 
 const languages = {
   fr: {nativeName: 'Français'},
@@ -11,9 +12,14 @@ const languages = {
 function App() {
   const { t, i18n } = useTranslation();
 
+  if (localStorageCustom.getFromLocalStorage('saveObject') === null || localStorageCustom.getFromLocalStorage('saveObject') === undefined) {
+    localStorageCustom.setInLocalStorage('saveObject', []);
+  }
+
   const sets = [
     {
       setName: t('basicSet'),
+      setSlug: 'basicSet',
       mageList: ['Adelhelm', 'Brama', 'Jian', 'Kadir', 'Lash', 'Mist', 'Phaedraxa'],
       nemesisList: [
         {name: 'rageBorne', src: 'rageBorne'},
@@ -24,14 +30,16 @@ function App() {
     },
     {
       setName: t('theDepth'),
-      mageList: ['Adelhelm', 'Brama', 'Jian', 'Kadir', 'Lash', 'Mist', 'Phaedraxa'],
+      setSlug: 'theDepth',
+      mageList: ['Nym', 'Reeve', 'Z\'hana'],
       nemesisList: [
         {name: 'horde', src: 'horde'},
       ]
     },
     {
       setName: t('theNameless'),
-      mageList: ['Adelhelm', 'Brama', 'Jian', 'Kadir', 'Lash', 'Mist', 'Phaedraxa'],
+      setSlug: 'theNameless',
+      mageList: ['Malastar'],
       nemesisList: [
         {name: 'blight', src: 'blight'},
         {name: 'wayward', src: 'wayward'},
@@ -39,12 +47,25 @@ function App() {
     },
   ]
 
+  /*const resetLocalStorage = () => {
+    localStorage.clear();
+  }*/
+
   return (
     <div className="App">
+      {/*<Button
+        type={"submit"}
+        onClick={resetLocalStorage}
+      >Reset local storage</Button>*/}
       <ButtonGroup variant="contained" aria-label="contained primary button group">
         <div>
           {Object.keys(languages).map((language) => (
-            <Button type={"submit"} key={language} onClick={() => i18n.changeLanguage(language)} disabled={i18n.resolvedLanguage === language}>{languages[language].nativeName}</Button>
+            <Button
+              type={"submit"}
+              key={language}
+              onClick={() => i18n.changeLanguage(language)}
+              disabled={i18n.resolvedLanguage === language}>{languages[language].nativeName}
+            </Button>
           )) }
         </div>
       </ButtonGroup>
