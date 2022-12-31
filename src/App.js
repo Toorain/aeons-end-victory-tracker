@@ -4,7 +4,6 @@ import {Button, ButtonGroup} from "@mui/material";
 import Expansion from "./components/Expansion/Expansion";
 import localStorageCustom from "./utils/LocalStorage";
 import {Document, Page, PDFDownloadLink, StyleSheet, Text, View} from "@react-pdf/renderer";
-import nemesis from "./components/Nemesis/Nemesis";
 
 const languages = {
   fr: {nativeName: 'Français'},
@@ -28,6 +27,9 @@ const styles = StyleSheet.create({
     flexGrow: 1
   }
 });
+if (localStorageCustom.getFromLocalStorage('saveObject') === null || localStorageCustom.getFromLocalStorage('saveObject') === undefined) {
+  localStorageCustom.setInLocalStorage('saveObject', []);
+}
 // Create Document Component
 const MyDocument = () => (
   <Document>
@@ -45,10 +47,6 @@ const MyDocument = () => (
 );
 function App() {
   const { t, i18n } = useTranslation();
-
-  if (localStorageCustom.getFromLocalStorage('saveObject') === null || localStorageCustom.getFromLocalStorage('saveObject') === undefined) {
-    localStorageCustom.setInLocalStorage('saveObject', []);
-  }
 
   const sets = [
     {
