@@ -3,6 +3,7 @@ import {Box, Grid, Paper, styled, Typography} from "@mui/material";
 // InputLabel, MenuItem, FormControl, Select,
 import Difficulty from "../Difficulty/Difficulty";
 import {useTranslation} from "react-i18next";
+import LocalStorage from "../../utils/LocalStorage";
 /*import {useState} from "react";
 import Mage from "../Mages/Mage";*/
 
@@ -19,9 +20,9 @@ function Expansion(props) {
   const [numberOfMages, setNumberOfMages] = useState([]);*/
 
   const { t } = useTranslation();
-  let saveObj = JSON.parse(localStorage.getItem('saveObject'));
+  let saveObj = LocalStorage.getFromLocalStorage('saveObject');
 
-  const difficulties = [t('easy'),t('normal'), t('hard'), t('brutal')];
+  const difficulties = [t('easy'),t('normal'), t('expert'), t('extermination')];
   /*const nbPlayers = [
     {label: t('true1P'), value: 1},
     {label: t('twoPlayers') + ' ' + t('or') + ' ' + t('onePlayer2Mages'), value: 2},
@@ -58,14 +59,14 @@ function Expansion(props) {
               ))}
             </Select>
           </FormControl>*/}
-          {Object.values(props.sets).map((set) => (
-          <Grid container spacing={1}>
+          {Object.values(props.sets).map((set, setIndex) => (
+          <Grid container spacing={1} key={set.setName + setIndex}>
             <Grid item xs={12} style={{display: 'flex', justifyContent: 'center', alignItems: 'center' , height: '15vh'}}>
               <Typography>{set.setName}</Typography>
             </Grid>
-            {Object.values(set.nemesisList).map((nemesis) => (
+            {Object.values(set.nemesisList).map((nemesis, nemesisIndex) => (
               <>
-                <Grid container>
+                <Grid container key={nemesis.name + nemesisIndex}>
                   <Grid item xs={2}>
                     <Item>
                       <Nemesis nemesisName={nemesis.name} imageSrc={nemesis.src} />
@@ -74,17 +75,19 @@ function Expansion(props) {
                   <Grid item xs={10} style={{
                     display: 'flex',
                   }}>
-                    {Object.values(difficulties).map((difficulty) => {
+                    {Object.values(difficulties).map((difficulty, difficultyIndex) => {
                       let control;
                       for(let i = 0; i < saveObj.length; i++) {
                         if(i === saveObj.length) {
                         } else {
-                          control = control || (set.setSlug === saveObj[i].set && nemesis.name === saveObj[i].nemesis && difficulty === saveObj[i].difficulty);
+                          for(let j = 0; j < difficulties.length; j++) {
+                            control = control || (set.setSlug === saveObj[i].set && nemesis.name === saveObj[i].nemesis && difficulty === saveObj[i].difficulty[j]);
+                          }
                         }
                       }
                       return (
                         <>
-                          <Grid item xs={3} key={difficulty}>
+                          <Grid item xs={3} key={difficulty + difficultyIndex}>
                             <Item sx={{
                               display: 'flex',
                               flexDirection: 'column'

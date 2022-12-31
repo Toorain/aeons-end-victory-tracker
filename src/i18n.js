@@ -10,10 +10,10 @@ i18next
     resources: {
       fr: {
         translation: {
-          easy: 'Facile',
+          easy: 'Simple',
           normal: 'Normal',
-          hard: 'Expert',
-          brutal: 'Extermination',
+          expert: 'Expert',
+          extermination: 'Extermination',
           basicSet: 'Jeu de Base',
           warEternal: 'Guerre éternelle',
           rageBorne: 'Rage Incarnée',
@@ -37,10 +37,10 @@ i18next
       },
       en: {
         translation: {
-          easy: 'Easy',
+          easy: 'Simple',
           normal: 'Normal',
-          hard: 'Expert',
-          brutal: 'Extermination',
+          expert: 'Expert',
+          extermination: 'Extermination',
           basicSet: 'Basic Set',
           warEternal: 'War Eternal',
           rageBorne: 'Rageborne',
