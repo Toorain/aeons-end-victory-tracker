@@ -31,7 +31,8 @@ i18next
           twoPlayers: '2 Joueurs',
           threePlayers: '3 Joueurs',
           fourPlayers: '4 Joueurs',
-          or: 'ou'
+          or: 'ou',
+          download: 'Télécharger la fiche'
         }
       },
       en: {
@@ -57,7 +58,8 @@ i18next
           twoPlayers: '2 Players',
           threePlayers: '3 Players',
           fourPlayers: '4 Players',
-          or: 'or'
+          or: 'or',
+          download: 'Download'
         }
       }
     }
