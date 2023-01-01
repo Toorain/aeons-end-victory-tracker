@@ -3,17 +3,18 @@ import {useTranslation} from "react-i18next";
 import {Button, ButtonGroup} from "@mui/material";
 import Expansion from "./components/Expansion/Expansion";
 import localStorageCustom from "./utils/LocalStorage";
-import {Document, Page, PDFDownloadLink, StyleSheet, Text, View} from "@react-pdf/renderer";
+
+// import {Document, Page, PDFDownloadLink, StyleSheet, Text, View} from "@react-pdf/renderer";
 
 const languages = {
   fr: {nativeName: 'Français'},
   en: {nativeName: 'English'}
 }
 
-const saveObject = localStorageCustom.getFromLocalStorage('saveObject');
+// const saveObject = localStorageCustom.getFromLocalStorage('saveObject');
 
 // Create styles
-const styles = StyleSheet.create({
+/*const styles = StyleSheet.create({
   page: {
     flexDirection: 'column',
     backgroundColor: '#E4E4E4'
@@ -26,12 +27,12 @@ const styles = StyleSheet.create({
     padding: 10,
     flexGrow: 1
   }
-});
+});*/
 if (localStorageCustom.getFromLocalStorage('saveObject') === null || localStorageCustom.getFromLocalStorage('saveObject') === undefined) {
   localStorageCustom.setInLocalStorage('saveObject', []);
 }
 // Create Document Component
-const MyDocument = () => (
+/*const MyDocument = () => (
   <Document>
     <Page size="A4" style={styles.page}>
       {saveObject.map((obj) => {
@@ -44,7 +45,7 @@ const MyDocument = () => (
       })}
     </Page>
   </Document>
-);
+);*/
 function App() {
   const { t, i18n } = useTranslation();
 
@@ -90,7 +91,7 @@ function App() {
         onClick={resetLocalStorage}
       >Reset local storage</Button>*/}
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-        <ButtonGroup variant="contained" aria-label="contained primary button group">
+        <ButtonGroup style={{ marginTop: '2rem' }} variant="contained" aria-label="contained primary button group">
           <div>
             {Object.keys(languages).map((language) => (
               <Button
@@ -102,11 +103,11 @@ function App() {
             )) }
           </div>
         </ButtonGroup>
-        <Button type={"submit"}>
-          <PDFDownloadLink document={<MyDocument />} fileName="somename.pdf">
+        {/*<Button type={"submit"} disabled>
+          <PDFDownloadLink document={<MyDocument />} fileName="somename.pdf" hidden>
             {({ blob, url, loading, error }) => (loading ? 'Loading document...' : t('download'))}
           </PDFDownloadLink>
-        </Button>
+        </Button>*/}
       </div>
       <Expansion sets={sets} />
     </div>
