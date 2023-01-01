@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/aeons-end-victory-tracker/static/css/main.073c9b0a.css",
+    "main.js": "/aeons-end-victory-tracker/static/js/main.e8e45285.js",
+    "static/js/787.eba7fbc8.chunk.js": "/aeons-end-victory-tracker/static/js/787.eba7fbc8.chunk.js",
+    "index.html": "/aeons-end-victory-tracker/index.html",
+    "main.073c9b0a.css.map": "/aeons-end-victory-tracker/static/css/main.073c9b0a.css.map",
+    "main.e8e45285.js.map": "/aeons-end-victory-tracker/static/js/main.e8e45285.js.map",
+    "787.eba7fbc8.chunk.js.map": "/aeons-end-victory-tracker/static/js/787.eba7fbc8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.e8e45285.js"
+  ]
+}
