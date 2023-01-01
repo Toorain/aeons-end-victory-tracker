@@ -2,7 +2,7 @@ import {useTranslation} from "react-i18next";
 import {Typography} from "@mui/material";
 function Nemesis(props) {
   const { t } = useTranslation();
-  let src = '/assets/img/' + props.imageSrc + '-500.jpg';
+  let src = './assets/img/' + props.imageSrc + '-500.jpg';
   let nemesisName = props.nemesisName;
   return (
     <div>
