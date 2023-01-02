@@ -3,6 +3,8 @@ import {useTranslation} from "react-i18next";
 import {Button, ButtonGroup} from "@mui/material";
 import Expansion from "./components/Expansion/Expansion";
 import localStorageCustom from "./utils/LocalStorage";
+import {useState} from "react";
+import LocalStorage from "./utils/LocalStorage";
 
 // import {Document, Page, PDFDownloadLink, StyleSheet, Text, View} from "@react-pdf/renderer";
 
@@ -47,6 +49,7 @@ if (localStorageCustom.getFromLocalStorage('saveObject') === null || localStorag
   </Document>
 );*/
 function App() {
+  // const [resetVisible, setResetVisible] = useState(true);
   const { t, i18n } = useTranslation();
 
   const sets = [
@@ -176,17 +179,22 @@ function App() {
   ]
 
   const resetLocalStorage = () => {
-    localStorage.clear();
+    LocalStorage.setInLocalStorage('saveObjectTemp', LocalStorage.getFromLocalStorage('saveObject'));
+    LocalStorage.setInLocalStorage('saveObject', []);
+    window.location.reload();
   }
+
+/*  const cancelReset = () => {
+    LocalStorage.setInLocalStorage('saveObject', LocalStorage.getFromLocalStorage('saveObjectTemp'));
+    LocalStorage.setInLocalStorage('saveObjectTemp', []);
+    setResetVisible(true);
+    window.location.reload();
+  }*/
 
   return (
     <div className="App">
-      <Button
-        type={"submit"}
-        onClick={resetLocalStorage}
-      >{t('reset')}</Button>
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-        <ButtonGroup style={{ marginTop: '2rem' }} variant="contained" aria-label="contained primary button group">
+        <ButtonGroup style={{ marginTop: '1rem' }} variant="contained" aria-label="contained primary button group">
           <div>
             {Object.keys(languages).map((language) => (
               <Button
@@ -198,6 +206,23 @@ function App() {
             )) }
           </div>
         </ButtonGroup>
+        <div style={{ marginTop: '1rem' }}>
+          <Button
+            style={{ marginRight: '0.5rem' }}
+            color="error"
+            type={"submit"}
+            variant={'outlined'}
+            onClick={resetLocalStorage}
+          >{t('reset')}</Button>
+          {/*{LocalStorage.getFromLocalStorage('saveObjectTemp') !== [] && (
+            <Button
+              style={{ marginLeft: '0.5rem'}}
+              type={"submit"}
+              variant={'outlined'}
+              onClick={cancelReset}
+            >{t('cancelReset')}</Button>
+          )}*/}
+        </div>
         {/*<Button type={"submit"} disabled>
           <PDFDownloadLink document={<MyDocument />} fileName="somename.pdf" hidden>
             {({ blob, url, loading, error }) => (loading ? 'Loading document...' : t('download'))}
