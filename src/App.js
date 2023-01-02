@@ -78,6 +78,91 @@ function App() {
         {name: 'wayward', src: 'wayward'},
       ]
     },
+    {
+      setName: t('warEternal'),
+      setSlug: 'warEternal',
+      mageList: ['Dezmodia', 'Garu', 'Gex', 'Mazahaedron', 'Mist', 'Quilius', 'Ulgimor', 'Yan Magda'],
+      nemesisList: [
+        {name: 'umbraTitan', src: 'umbraTitan'},
+        {name: 'hollowCrown', src: 'hollowCrown'},
+        {name: 'gateWitch', src: 'gateWitch'},
+        {name: 'magusOfCloaks', src: 'magusOfCloaks'},
+      ]
+    },
+    {
+      setName: t('theOuterDark'),
+      setSlug: 'theOuterDark',
+      mageList: [],
+      nemesisList: [
+        {name: 'thriceDeadProphet', src: 'thriceDeadProphet'},
+        {name: 'wraithMonger', src: 'wraithMonger'},
+      ]
+    },
+    {
+      setName: t('legacy'),
+      setSlug: 'legacy',
+      mageList: [],
+      nemesisList: []
+    },
+    {
+      setName: t('buriedSecrets'),
+      setSlug: 'buriedSecrets',
+      mageList: [],
+      nemesisList: []
+    },
+    {
+      setName: t('theNewAge'),
+      setSlug: 'theNewAge',
+      mageList: [],
+      nemesisList: [
+        {name: 'agelessWalker', src: 'agelessWalker'},
+        {name: 'arachnos', src: 'arachnos'},
+        {name: 'fenrix', src: 'fenrix'},
+        {name: 'maggoth', src: 'maggoth'},
+      ]
+    },
+    {
+      setName: t('theAncients'),
+      setSlug: 'theAncients',
+      mageList: [],
+      nemesisList: [
+        {name: 'theWanderer', src: 'theWanderer'},
+      ]
+    },
+    {
+      setName: t('intoTheWild'),
+      setSlug: 'intoTheWild',
+      mageList: [],
+      nemesisList: [
+        {name: 'necroswarm', src: 'necroswarm'},
+      ]
+    },
+    {
+      setName: t('shatteredDreams'),
+      setSlug: 'shatteredDreams',
+      mageList: [],
+      nemesisList: [
+        {name: 'theWailing', src: 'theWailing'},
+      ]
+    },
+    {
+      setName: t('outcasts'),
+      setSlug: 'outcasts',
+      mageList: [],
+      nemesisList: []
+    },
+    {
+      setName: t('returnToGravehold'),
+      setSlug: 'returnToGravehold',
+      mageList: [],
+      nemesisList: []
+    },
+    {
+      setName: t('southernVillage'),
+      setSlug: 'southernVillage',
+      mageList: [],
+      nemesisList: []
+    },
   ]
 
   /*const resetLocalStorage = () => {

@@ -62,7 +62,7 @@ function Expansion(props) {
           {Object.values(props.sets).map((set, setIndex) => (
           <Grid container spacing={1} key={set.setName + setIndex}>
             <Grid item xs={12} style={{display: 'flex', justifyContent: 'center', alignItems: 'center' , height: '15vh'}}>
-              <Typography>{set.setName}</Typography>
+              <Typography variant={'h5'}>{set.setName}</Typography>
             </Grid>
             {Object.values(set.nemesisList).map((nemesis, nemesisIndex) => (
               <>

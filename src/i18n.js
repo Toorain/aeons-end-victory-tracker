@@ -32,7 +32,18 @@ i18next
           threePlayers: '3 Joueurs',
           fourPlayers: '4 Joueurs',
           or: 'ou',
-          download: 'Télécharger la fiche'
+          download: 'Télécharger la fiche',
+          theOuterDark: 'Ténèbres d\'Ailleurs',
+          theVoid: 'Le Vide',
+          legacy: 'Legacy',
+          buriedSecrets: 'Buried Secrets',
+          theNewAge: 'The New Age',
+          theAncients: 'The Ancients',
+          intoTheWild: 'Into the Wild',
+          shatteredDreams: 'Shattered Dreams',
+          outcasts: 'Outcasts',
+          returnToGravehold: 'Return to Gravehold',
+          southernVillage: 'Southern Village'
         }
       },
       en: {
@@ -59,7 +70,18 @@ i18next
           threePlayers: '3 Players',
           fourPlayers: '4 Players',
           or: 'or',
-          download: 'Download'
+          download: 'Download',
+          theOuterDark: 'The Outer Dark',
+          theVoid: 'The Void',
+          legacy: 'Legacy',
+          buriedSecrets: 'Buried Secrets',
+          theNewAge: 'The New Age',
+          theAncients: 'The Ancients',
+          intoTheWild: 'Into the Wild',
+          shatteredDreams: 'Shattered Dreams',
+          outcasts: 'Outcasts',
+          returnToGravehold: 'Return to Gravehold',
+          southernVillage: 'Southern Village'
         }
       }
     }
