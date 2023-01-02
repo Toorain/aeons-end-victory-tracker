@@ -148,33 +148,43 @@ function App() {
     {
       setName: t('outcasts'),
       setSlug: 'outcasts',
-      mageList: [],
-      nemesisList: []
+      mageList: ['Arachnos (Outcasts)', 'Dezmodia (Outcasts)', 'Ilya', 'Kel', 'Qu (Outcasts)', 'Taqren (Outcasts)', 'Thraxir', 'Z\'hana (Outcasts)'],
+      nemesisList: [
+        {name: 'placeholder', src: 'placeholder'},
+        {name: 'placeholder', src: 'placeholder'},
+        {name: 'placeholder', src: 'placeholder'},
+        {name: 'placeholder', src: 'placeholder'},
+      ]
     },
     {
       setName: t('returnToGravehold'),
       setSlug: 'returnToGravehold',
-      mageList: [],
-      nemesisList: []
+      mageList: ['Cairna', 'Ohat and Ulgimor'],
+      nemesisList: [
+        {name: 'placeholder', src: 'placeholder'},
+        {name: 'placeholder', src: 'placeholder'},
+      ]
     },
     {
       setName: t('southernVillage'),
       setSlug: 'southernVillage',
-      mageList: [],
-      nemesisList: []
+      mageList: ['Lucien', 'Reth'],
+      nemesisList: [
+        {name: 'placeholder', src: 'placeholder'},
+      ]
     },
   ]
 
-  /*const resetLocalStorage = () => {
+  const resetLocalStorage = () => {
     localStorage.clear();
-  }*/
+  }
 
   return (
     <div className="App">
-      {/*<Button
+      <Button
         type={"submit"}
         onClick={resetLocalStorage}
-      >Reset local storage</Button>*/}
+      >{t('reset')}</Button>
       <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
         <ButtonGroup style={{ marginTop: '2rem' }} variant="contained" aria-label="contained primary button group">
           <div>
