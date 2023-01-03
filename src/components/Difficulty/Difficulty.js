@@ -1,9 +1,12 @@
 import {useEffect, useState} from "react";
-import {Checkbox, FormControl, FormControlLabel, FormGroup} from "@mui/material";
+import {Checkbox, FormControl, FormControlLabel, FormGroup, TextField} from "@mui/material";
 import localStorage from "../../utils/LocalStorage";
+import {useTranslation} from "react-i18next";
 
 function Difficulty(props) {
+  const { t } = useTranslation();
   const [checked, setChecked] = useState(false);
+  const [deathCountValue, setDeathCountValue] = useState(0);
 
   useEffect(() => {
     if(localStorage.getFromLocalStorage('saveObject').length !== 0) {
@@ -28,7 +31,7 @@ function Difficulty(props) {
              saveObjectLocalStorage.push({
               set: props.set.setSlug,
               nemesis: props.nemesis.name,
-              difficulty: [props.difficulty],
+               difficulty: [props.difficulty],
               mages: []
             })
           }
@@ -75,9 +78,29 @@ function Difficulty(props) {
     localStorage.setInLocalStorage('saveObject', saveObjectLocalStorage);
   };
 
+  // TODO : Handle the Death Count push to localstorage for each nemesis and difficulty.
+  const handleDeathCountChange = (event) => {
+    setDeathCountValue(event.target.value);
+    let saveObjectLocalStorage = localStorage.getFromLocalStorage('saveObject');
+    for (let j = 0; j < saveObjectLocalStorage.length; j++) {
+      for (let k = 0; k < saveObjectLocalStorage[j].difficulty.length; k++) {
+        console.log(saveObjectLocalStorage[j].difficulty[k], props.difficulty);
+        if(saveObjectLocalStorage[j].difficulty[k] === props.difficulty) {
+          let objToPush = {
+            set: props.set.setSlug,
+            nemesis: props.nemesis.name,
+            difficulty: [props.difficulty],
+            mages: []
+          }
+          console.log(objToPush);
+        }
+      }
+    }
+  }
+
   return (
     <div>
-      <FormControl component="fieldset">
+      <FormControl component="fieldset" style={{ display: "flex", flexDirection: "row" }}>
         <FormGroup aria-label="position" row>
           <FormControlLabel
             value={props.difficulty}
@@ -88,6 +111,14 @@ function Difficulty(props) {
             labelPlacement="top"
           />
         </FormGroup>
+        <div>
+          <p>{t("rektCount")}</p>
+          <TextField onChange={handleDeathCountChange} value={deathCountValue} InputProps={{
+            inputProps: {
+              max: 999, min: 0
+            }
+          }} style={{ width: "5em" }} size="small" type="number" />
+        </div>
       </FormControl>
     </div>
   );

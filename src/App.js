@@ -3,7 +3,6 @@ import {useTranslation} from "react-i18next";
 import {Button, ButtonGroup} from "@mui/material";
 import Expansion from "./components/Expansion/Expansion";
 import localStorageCustom from "./utils/LocalStorage";
-import {useState} from "react";
 import LocalStorage from "./utils/LocalStorage";
 
 // import {Document, Page, PDFDownloadLink, StyleSheet, Text, View} from "@react-pdf/renderer";
