@@ -1,12 +1,12 @@
 import {useEffect, useState} from "react";
-import {Checkbox, FormControl, FormControlLabel, FormGroup, TextField} from "@mui/material";
+import {Checkbox, FormControl, FormControlLabel, FormGroup} from "@mui/material";
 import localStorage from "../../utils/LocalStorage";
-import {useTranslation} from "react-i18next";
+// import {useTranslation} from "react-i18next";
 
 function Difficulty(props) {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const [checked, setChecked] = useState(false);
-  const [deathCountValue, setDeathCountValue] = useState(0);
+  // const [deathCountValue, setDeathCountValue] = useState(0);
 
   useEffect(() => {
     if(localStorage.getFromLocalStorage('saveObject').length !== 0) {
@@ -79,7 +79,7 @@ function Difficulty(props) {
   };
 
   // TODO : Handle the Death Count push to localstorage for each nemesis and difficulty.
-  const handleDeathCountChange = (event) => {
+  /*const handleDeathCountChange = (event) => {
     setDeathCountValue(event.target.value);
     let saveObjectLocalStorage = localStorage.getFromLocalStorage('saveObject');
     for (let j = 0; j < saveObjectLocalStorage.length; j++) {
@@ -96,7 +96,7 @@ function Difficulty(props) {
         }
       }
     }
-  }
+  }*/
 
   return (
     <div>
@@ -111,14 +111,14 @@ function Difficulty(props) {
             labelPlacement="top"
           />
         </FormGroup>
-        <div>
+        {/*<div>
           <p>{t("rektCount")}</p>
           <TextField onChange={handleDeathCountChange} value={deathCountValue} InputProps={{
             inputProps: {
               max: 999, min: 0
             }
           }} style={{ width: "5em" }} size="small" type="number" />
-        </div>
+        </div>*/}
       </FormControl>
     </div>
   );
