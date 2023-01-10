@@ -48,18 +48,18 @@ i18next
           "theDepth": "Les Profondeurs",
           "theNameless": "Les Sans-Noms",
           "theNewAge": "The New Age",
-          "theOuterDark": "Ténèbres d\\'Ailleurs",
+          "theOuterDark": "Ténèbres d'Ailleurs",
           "theVoid": "Le Vide",
           "theWailing": "The Wailing",
           "theWanderer": "The Wanderer",
           "threePlayers": "3 Joueurs",
-          "thriceDeadProphet": "Thrice-Dead Prophet",
+          "thriceDeadProphet": "Prophète aux Trois Trépas",
           "true1P": "1 Joueur 1 Mage (True 1P)",
           "twoPlayers": "2 Joueurs",
           "umbraTitan": "Titan de l'Ombre",
           "warEternal": "Guerre éternelle",
-          "wayward": "L\\'Égaré",
-          "wraithMonger": "Wraithmonger"
+          "wayward": "L'Égaré",
+          "wraithMonger": "Maître des Spectres"
         }
       },
       en: {
